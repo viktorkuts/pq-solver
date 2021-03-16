@@ -3,10 +3,11 @@
 
 int main(int argc, char *argv[])
 {
-
-	if(argv[1] == NULL || argv[2] == NULL || argv[3] == NULL)
+	const char version[5] = "1.0.1";
+	printf("\npq-solver v%s\n\n",version);
+	if(argc != 4)
 	{
-		printf("Please provide a,b and c\nUsage: pq-solver 3 4 -4\n");
+		printf("Please provide a,b and c\nUsage: pq-solver [a b c]\n");
 		return 0;
 	}
 
@@ -17,25 +18,26 @@ int main(int argc, char *argv[])
 	b = strtol(argv[2],&endptr, 10);
 	c = strtol(argv[3],&endptr, 10);
 
-	printf("a: %d\nb: %d\nc: %d\n",a,b,c);
+	printf("a: %d\nb: %d\nc: %d\n\np*q: %d\np+q: %d\n",a,b,c,a*c,b);
 
 	for(int i = -10000; i < 10000; i++)
 	{
-	 if(i == 0) return 0;
-	 if(((float)a*c / i) == (a*c / i))
-	 {
-		p = a*c / i;
-		q = i;
+	 if(i != 0)
+	{
 
-		if(p + q == b)
-		{
-			printf("\np: %d\nq: %d\n",p,q);
-		}else if(-p + -q == b)
+		 if(((float)a*c / i) == (a*c / i))
+	 	 {
+			p = a*c / i;
+			q = i;
+			if(p+q == b)
 			{
 				printf("\np: %d\nq: %d\n",p,q);
+				break;
 			}
-	 }
+		}
+	}
 	}
 
 	return 0;
+
 }
