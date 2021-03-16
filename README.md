@@ -15,4 +15,5 @@ c:-4
 
 p:  2  
 q: -6  
-```
+```  
+The solver may return 2 answers as sometimes the signs are inversed and you may need to check which one is good. Also please note that this is a tool and could return imprecise answers, so always verify.

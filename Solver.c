@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 	b = strtol(argv[2],&endptr, 10);
 	c = strtol(argv[3],&endptr, 10);
 
-	printf("a: %d\nb: %d\nc: %d\n\n",a,b,c);
+	printf("a: %d\nb: %d\nc: %d\n",a,b,c);
 
 	for(int i = -10000; i < 10000; i++)
 	{
@@ -29,12 +29,10 @@ int main(int argc, char *argv[])
 
 		if(p + q == b)
 		{
-			printf("p: %d\nq: %d\n",p,q);
-			break;
+			printf("\np: %d\nq: %d\n",p,q);
 		}else if(-p + -q == b)
 			{
-				printf("p: %d\nq: %d\n",p,q);
-				break;
+				printf("\np: %d\nq: %d\n",p,q);
 			}
 	 }
 	}
