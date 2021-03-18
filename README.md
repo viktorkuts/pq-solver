@@ -6,7 +6,7 @@ You can install pq-finder by compiling it with make or gcc. You can also install
 
 # Usage
 To use pq-solver, you must provide the a,b and c variable in the arguments.  
-Here is an example with the trinomial 3xÂ + 4x - 4  
+Here is an example with the trinomial 3xÂ² + 4x - 4  
 ```  
 $ ./pq-solver 3 4 -4  
 a: 3  
